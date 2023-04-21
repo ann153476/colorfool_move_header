@@ -4,44 +4,85 @@ body {
   overflow: hidden;
 }
 .contacts__box {
-  background-color: rgba(212, 177, 177, 0.723);
   border-radius: 30px;
   margin: 15vh auto 0;
-  width: 60%;
+  width: 80%;
   height: 60vh;
-  display: flex;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  @media screen and (min-width: 767.5px) {
+    display: flex;
+  }
 }
 .contacts__box > ul {
   width: 50%;
+  display: flex;
 }
 .m__t {
-  background-color: rgba(81, 255, 0, 0.226);
-  display: flex;
-  align-items: center;
+  background-color: rgba(240, 248, 255, 0.593);
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.m__t svg {
-  margin-right: 25px;
+.m__t p {
+  color: #34495e;
+  font-weight: bold;
+}
+.m__t li {
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 40px;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0.737);
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+.m__t li:hover {
+  background-color: #e67e22;
+}
+.messengers li:hover svg,
+.m__t li:hover p,
+.m__t li:hover svg {
+  fill: white;
+  color: white;
+}
+
+.m__t a {
+  width: 100%;
+}
+.contacts__box svg {
   width: 30px;
   height: 30px;
-  @media screen and (min-width: 767.5px) {
-    width: 60px;
-    height: 60px;
-  }
-}
-.m__t a {
-  background-color: red;
-  color: #34495e;
-  // display: flex;
-  // align-items: center;
-  // justify-content: start;
-
-  margin: 20px;
-  @media screen and (min-width: 767.5px) {
-    font-size: 30px;
-  }
+  margin: 0 15px;
+  fill: #34495e;
 }
 .messengers {
-  background-color: rgba(255, 228, 196, 0.244);
+  background-color: #e67d223e;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.messengers li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 3px solid #34495e;
+  width: 100%;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  transition: all 0.5s ease 0s;
+}
+.messengers li:hover {
+  background-color: #e67e22;
+  border: 3px solid white;
+}
+.messengers svg {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
 }
