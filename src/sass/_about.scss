@@ -1,0 +1,87 @@
+.about__body {
+  background-image: linear-gradient(#34495e, white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: 767.5px) {
+    flex-direction: row;
+  }
+}
+.a1 img,
+.a2 img {
+  display: block;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  @media screen and (min-width: 767.5px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+.a1,
+.a2 {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.29);
+  border-radius: 20px;
+  margin: 30px;
+  @media screen and (min-width: 767.5px) {
+    width: 400px;
+    height: 400px;
+  }
+}
+.a1 > div,
+.a2 > div {
+  height: 33.33%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  // position: relative;
+}
+.about__body p {
+  width: 200px;
+  font-size: 14px;
+}
+
+.overlay__box {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #e74c3c;
+  width: 70px;
+  height: 70px;
+  @media screen and (min-width: 767.5px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+.overlay p {
+  font-size: 10px;
+  @media screen and (min-width: 767.5px) {
+    font-size: 20px;
+  }
+}
+.overlay {
+  color: white;
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 70px;
+  height: 35px;
+  background-color: #e74c3c;
+  top: 0;
+  left: 0;
+  transition: transform 1s linear;
+  transform: translateY(200%);
+  @media screen and (min-width: 767.5px) {
+    width: 100px;
+    height: 50px;
+  }
+}
+.overlay__box:hover .overlay {
+  transform: translateY(100%);
+}

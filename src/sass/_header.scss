@@ -4,9 +4,10 @@ header {
   padding-right: 5%;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .logo {
@@ -20,9 +21,9 @@ header {
   }
 }
 .logo img {
-  width: 20px;
+  width: 40px;
   @media screen and (min-width: 767.5px) {
-    width: 40px;
+    width: 90px;
   }
 }
 // .nav__box {
