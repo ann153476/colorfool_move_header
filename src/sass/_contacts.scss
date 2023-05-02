@@ -5,24 +5,34 @@
 }
 .contacts__box {
   border-radius: 30px;
-  margin: 15vh auto 0;
+  margin: 5vh auto 0;
   width: 80%;
-  height: 60vh;
+  height: 80vh;
   overflow: hidden;
   backdrop-filter: blur(2px);
   @media screen and (min-width: 767.5px) {
+    margin: 15vh auto 0;
+    height: 60vh;
     display: flex;
   }
 }
 .contacts__box > ul {
-  width: 50%;
+  width: 100%;
   display: flex;
+  margin: auto;
+  @media screen and (min-width: 767.5px) {
+    width: 50%;
+    height: 100%;
+  }
 }
 .m__t {
   background-color: rgba(240, 248, 255, 0.593);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 767.5px) {
+    height: 30%;
+  }
 }
 .m__t p {
   color: #34495e;
@@ -43,7 +53,7 @@
 .m__t li:hover {
   background-color: #e67e22;
 }
-.messengers li:hover svg,
+.messengers a:hover svg,
 .m__t li:hover p,
 .m__t li:hover svg {
   fill: white;
@@ -62,27 +72,36 @@
 .messengers {
   background-color: #e67d223e;
   flex-wrap: wrap;
-  align-items: center;
+  align-content: center;
   justify-content: center;
+  @media screen and (max-width: 767.5px) {
+    height: 70%;
+  }
 }
 .messengers li {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-basis: calc((100% - 4 * 20px) / 2);
+  margin: 20px;
+}
+.messengers a {
   border-radius: 20px;
   border: 3px solid #34495e;
-  width: 100%;
-  width: 100px;
-  height: 100px;
-  margin: 20px;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.5s ease 0s;
 }
-.messengers li:hover {
+.messengers a:hover {
   background-color: #e67e22;
   border: 3px solid white;
 }
 .messengers svg {
   width: 50px;
   height: 50px;
-  margin: 20px;
+  transition: all 0.5s ease 0s;
 }
